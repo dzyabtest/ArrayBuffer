@@ -1,23 +1,9 @@
+/* eslint-disable eol-last */
+/* eslint-disable import/no-named-as-default-member */
 /* eslint-disable indent */
 // TODO: write your code here
-export default class Team {
-    constructor() {
-        this.members = new Set();
-    }
 
-    add(character) {
-        if (this.members.has(character)) {
-            throw new Error('Повторное добавление персонажа!');
-        }
+// eslint-disable-next-line import/no-named-as-default
+import Character from './character';
 
-        this.members.add(character);
-    }
-
-    addAll(...characters) {
-        characters.forEach((item) => this.members.add(item));
-    }
-
-    toArrray() {
-        return Array.from(this.members);
-    }
-}
+console.log(new Character(100));
